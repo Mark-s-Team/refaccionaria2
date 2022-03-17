@@ -92,38 +92,14 @@ color: #bfbfbf;
   text-transform: uppercase;
   a {
     color: #fff;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.2;
     word-break: break-word;
     font-size: 20px;
     small{
         display:block ;
     }
-    }
-}
-.section1-1-span {
-  color: #fab915;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1;
-}
-.section1-1-h2 {
-    margin-bottom: 20px;
-    font-size: 32px;
-    position: relative;
-    word-wrap: break-word;
-    line-height: 1;
-    font-size: 40px;
-    color: #fff;
-    margin-top: 0;
-}
-.divider {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  width: 60px;
-  height: 2px;
-  background-color: #fab915;
+  }
 }
 .section1-2-p {
   margin-top: 30px;
