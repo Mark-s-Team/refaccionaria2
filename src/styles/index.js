@@ -7,13 +7,25 @@ html,body,#root{
     height: 100%;
     width: 100%;
     scroll-behavior: smooth;
-    overflow: auto;
-    overflow-x:hidden ;
+    font-family: open sans,sans-serif;
 }
 *{
     box-sizing: border-box;
 }
 a{
     text-decoration:none ;
+}
+input, textarea{
+
+    &::placeholder{
+        text-transform:uppercase;
+        font-size:14px ;
+    }
+}
+p{
+    margin:0;
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
 }
 `;
