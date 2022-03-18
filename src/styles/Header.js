@@ -121,7 +121,7 @@ export const Header = styled.div`
   > li {
     list-style: none;
     display: flex;
-    a{
+    div{
       margin-left: 19px;
       margin-right: 19px;
       padding-top: 52px;
@@ -131,6 +131,8 @@ export const Header = styled.div`
       text-transform:uppercase;
       font-size: 14px;
       font-weight: 700;
+      transition: all .2s ease-in-out 0s;
+      cursor: pointer;
     }
   }
 }
@@ -282,5 +284,18 @@ export const Header = styled.div`
   color: #fff;
   background-color: #fab915;
   border-radius: 50%;
+}
+.sticky{
+  position:fixed;
+  top:0;
+  z-index: 100;
+  .header-container{
+    background-color: rgb(33, 35, 36);
+    box-shadow: 0 1px 15px rgba(0,0,0,.3);
+  }
+  .menu-ul ul > li > div{
+    padding-top: 27px;
+    padding-bottom: 27px;
+  }
 }
 `;
