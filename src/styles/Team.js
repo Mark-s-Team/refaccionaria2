@@ -56,8 +56,8 @@ export const Team = styled.div`
   width: 100%;
   margin-bottom: 30px;
   margin-top: 10px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .section3-1 {
   margin-top: -100px;

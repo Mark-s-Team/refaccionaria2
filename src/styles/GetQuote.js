@@ -94,8 +94,6 @@ background-size: cover;
 }
 .buttons {
   margin-top: 30px;
-  padding-right: 15px;
-  padding-left: 15px;
     button {
     font-size: 14px;
     text-transform: uppercase;

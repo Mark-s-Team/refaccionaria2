@@ -9,7 +9,7 @@ export const About = styled.div`
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
-  width: 1170px;
+  max-width: 1170px;
   padding-bottom: 75px;
   padding-top: 100px;
 }

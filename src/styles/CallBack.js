@@ -21,23 +21,25 @@ background-size: cover;
 .callback-container {
   padding-top: 100px;
   padding-bottom: 100px;
+  max-width: 100%;
   width: 1170px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   z-index: 3;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .section1 {
   display: flex;
 }
 .section1-1 {
   display: flex;
+  width:25%;
 }
 .section1-1-txt {
   display: flex;
   align-items: center;
-  padding-left: 10px;
-  padding-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
     h2 {

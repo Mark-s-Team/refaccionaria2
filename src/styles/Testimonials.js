@@ -16,6 +16,10 @@ blockquote {
   padding-top: 100px;
   position: relative;
 }
+.section1 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .slider-item-txt {
   display: table-cell;
   padding: 30px;
