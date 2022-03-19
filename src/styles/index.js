@@ -16,10 +16,15 @@ a{
     text-decoration:none ;
 }
 input, textarea{
-
+    outline:none ;
     &::placeholder{
         text-transform:uppercase;
         font-size:14px ;
+        font-style:italic;
+        font-family: open sans,sans-serif;
+    }
+    &:focus::placeholder {
+        color: transparent;
     }
 }
 p{
