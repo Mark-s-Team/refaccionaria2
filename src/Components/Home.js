@@ -12,9 +12,11 @@ import { GetQuote } from '../styles/GetQuote';
 import { Testimonials } from '../styles/Testimonials';
 import { CallBack } from '../styles/CallBack';
 import { Anvantages } from '../styles/Anvantages';
-import { News } from '../styles/News';
 import { Slider } from '../styles/Slider';
 import { Footer } from '../styles/Footer';
+import { PageMain } from '../styles/PageMain';
+import Contact from './Contact';
+
 export default function Home(){
     const options = {
         margin: 30,
@@ -117,10 +119,15 @@ export default function Home(){
     const refE = useRef(null);
     const refF = useRef(null);
     const refG = useRef(null);
-    const refH = useRef(null);
+    const [isVisible, setIsVisible] = useState(false);
+    
     const scrollTo = (el)=>{
+        if (isVisible) {
+            setIsVisible(false);
+        }
         el.current.scrollIntoView({behavior: 'smooth'});
     }
+    
     return(
         <>
             <Header ref={refA}>
@@ -187,7 +194,7 @@ export default function Home(){
                                     <li><div onClick={()=> scrollTo(refE)}>Get Quote</div></li>
                                     <li><div onClick={()=> scrollTo(refF)}>Testimonals</div></li>
                                     <li><div onClick={()=> scrollTo(refG)}>CallcBack</div></li>
-                                    <li><div onClick={()=> scrollTo(refH)}>News</div></li>
+                                    <li><div onClick={()=> setIsVisible(true)} >Contact</div></li>
                                 </ul>
                             </div>
                         </div>
@@ -197,38 +204,44 @@ export default function Home(){
                         </div>
                     </div>
                 </div>
-                <div className="page_main">
-                    <div className="slider-container">
-                        <img src="assets/images/slide01.jpg" alt="" />
-                        <div className="sl-container">
-                            <div className="description">
-                                <div className="description-layer ">
-                                    <p className="bold text-uppercase highlight"> welcome to the clearview </p>
-                                    <h2>We Provide 24/7 Mobile Service</h2>
-                                </div>
-                                <div className="description-layer">
-                                    <p className="normal-p">We Offer FREE mobile repair service, for all customers within a 25 mile range of our location.</p>
-                                </div>
-                                <div className="description-layer">
-                                    <div className="description-buttons">
-                                        <a href="#" className="btn1">
-                                            Free Estimate
-                                        </a>
-                                        <a href="#" className="btn2">
-                                            <span className="left-icon">
-												<img src="assets/images/bbb.png" alt="" draggable="false" />
-											</span>
-											Accredited<br/> bussiness
-											<span className="right-icon">A+</span>
-                                        </a>
+            </Header>
+            <div className="body-container">
+                {isVisible ? 
+                <Contact isVisible={()=> setIsVisible(false)} />
+                : 
+                <div className="spa">
+                <PageMain>
+                    <div className="page_main">
+                        <div className="slider-container">
+                            <img src="assets/images/slide01.jpg" alt="" />
+                            <div className="sl-container">
+                                <div className="description">
+                                    <div className="description-layer ">
+                                        <p className="bold text-uppercase highlight"> welcome to the clearview </p>
+                                        <h2>We Provide 24/7 Mobile Service</h2>
+                                    </div>
+                                    <div className="description-layer">
+                                        <p className="normal-p">We Offer FREE mobile repair service, for all customers within a 25 mile range of our location.</p>
+                                    </div>
+                                    <div className="description-layer">
+                                        <div className="description-buttons">
+                                            <a href="#" className="btn1">
+                                                Free Estimate
+                                            </a>
+                                            <a href="#" className="btn2">
+                                                <span className="left-icon">
+                                                    <img src="assets/images/bbb.png" alt="" draggable="false" />
+                                                </span>
+                                                Accredited<br/> bussiness
+                                                <span className="right-icon">A+</span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </Header>
-            <div className="body-container">
+                </PageMain>
                 <About ref={refB}>
                     <div className="container">
                         <div className="section1">
@@ -594,94 +607,8 @@ export default function Home(){
                         </div>
                     </div>
                 </Anvantages>
-                <News ref={refH}>
-                    <div className="news-container">
-                        <div className="section1">
-                            <Title color="#fff">
-                                <span>
-                                Our blog 
-                                </span>
-                                <h2>Our Latest News</h2>
-                                <Divider />
-                            </Title>
-                            <div className="section1-1">
-                                <ul>
-                                    <li><a href="#">Auto glass</a></li>
-                                    <li><a href="#">Glass tining</a></li>
-                                    <li><a href="#">Glass replacement</a></li>
-                                    <li><a href="#">Chip repair</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="section2">
-                            <OwlCarousel className="owl-theme" {...options}>
-                                <div className="slider-item">
-                                    <div className="slider-item-img">
-                                        <img src="assets/images/news/01.jpg" alt="" />
-                                    </div>
-                                    <div className="slider-item-content">
-                                        <div className="slider-item-txt-header">
-                                            <div className="item-txt-cat">
-                                                <p>Auto Glass</p>
-                                            </div>
-                                            <div className="item-txt-title">
-                                                <h4>Study 800 Number Still Popular</h4>
-                                            </div>
-                                            <div className="item-txt-text">
-                                                <p>Pig tri-tip burgdoggen tongue spare ribs. Beef ribs alcatra cupim.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slider-item-footer">
-
-                                    </div>
-                                </div>
-                                <div className="slider-item">
-                                    <div className="slider-item-img">
-                                        <img src="assets/images/news/02.jpg" alt="" />
-                                    </div>
-                                    <div className="slider-item-content">
-                                        <div className="slider-item-txt-header">
-                                            <div className="item-txt-cat">
-                                                <p>Auto Glass</p>
-                                            </div>
-                                            <div className="item-txt-title">
-                                                <h4>Study 800 Number Still Popular</h4>
-                                            </div>
-                                            <div className="item-txt-text">
-                                                <p>Pig tri-tip burgdoggen tongue spare ribs. Beef ribs alcatra cupim.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slider-item-footer">
-
-                                    </div>
-                                </div>
-                                <div className="slider-item">
-                                    <div className="slider-item-img">
-                                        <img src="assets/images/news/03.jpg" alt="" />
-                                    </div>
-                                    <div className="slider-item-content">
-                                        <div className="slider-item-txt-header">
-                                            <div className="item-txt-cat">
-                                                <p>Auto Glass</p>
-                                            </div>
-                                            <div className="item-txt-title">
-                                                <h4>Study 800 Number Still Popular</h4>
-                                            </div>
-                                            <div className="item-txt-text">
-                                                <p>Pig tri-tip burgdoggen tongue spare ribs. Beef ribs alcatra cupim.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="slider-item-footer">
-
-                                    </div>
-                                </div>
-                            </OwlCarousel>
-                        </div>
-                    </div>
-                </News>
+                </div>
+                }
                 <Slider>
                     <div className="slider-container">
                         <div className="slider-items">
@@ -741,7 +668,7 @@ export default function Home(){
                                 </div>
                                 <div className="footer-container-section1-1-item">
                                     <div className="footer-container-section1-1-item-ico">
-                                        <i className="fa-solid fa-location-dot"></i>
+                                        <i className="fa-solid fa-phone"></i>
                                     </div>
                                     <div className="footer-container-section1-1-item-txt">
                                     0 (800) 846 4235 (operator)
@@ -749,7 +676,7 @@ export default function Home(){
                                 </div>
                                 <div className="footer-container-section1-1-item">
                                     <div className="footer-container-section1-1-item-ico">
-                                        <i className="fa-solid fa-location-dot"></i>
+                                        <i className="fa-solid fa-pencil"></i>
                                     </div>
                                     <div className="footer-container-section1-1-item-txt">
                                         <a href="#">clearview@example.com</a>
@@ -757,7 +684,7 @@ export default function Home(){
                                 </div>
                                 <div className="footer-container-section1-1-item">
                                     <div className="footer-container-section1-1-item-ico">
-                                        <i className="fa-solid fa-location-dot"></i>
+                                        <i className="far fa-clock"></i>
                                     </div>
                                     <div className="footer-container-section1-1-item-txt">
                                         Working Hours: 24/7
