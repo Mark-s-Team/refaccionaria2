@@ -9,9 +9,20 @@ export const About = styled.div`
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
-  max-width: 1170px;
+  width: 1170px;
   padding-bottom: 75px;
   padding-top: 100px;
+  @media(max-width:1100px){
+    width: 970px;
+  }
+  @media(max-width:980px){
+    width: 750px;
+    flex-direction:column-reverse;
+    padding-top: 75px;
+  }
+  @media(max-width:750px){
+    width: 500px;
+  }
 }
 .section1 {
   width: 50%;
@@ -19,6 +30,9 @@ export const About = styled.div`
   padding-left: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
+  @media(max-width:980px){
+    width:100%;
+  }
 }
 .section1-txt {
   margin-bottom: 30px;
@@ -74,6 +88,9 @@ export const About = styled.div`
   padding-left: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
+  @media(max-width:980px){
+    width:100%;
+  }
 }
 .section2-container {
     position:relative;

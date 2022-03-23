@@ -15,6 +15,17 @@ export const Footer = styled.div`
   margin-right: auto;
   margin-left: auto;
   display: flex;
+  flex-wrap:wrap ;
+  @media(max-width:1100px){
+    width: 970px;
+  }
+  @media(max-width:980px){
+    width: 750px;
+  }
+  @media(max-width:750px){
+    width: 500px;
+    
+  }
 }
 .footer-container-section1-1 {
   width: 50%;
@@ -35,6 +46,10 @@ export const Footer = styled.div`
         margin-bottom: 25px;
         color: #fff;
     }
+  @media(max-width:750px){
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 
 .footer-container-section1-1-item {
@@ -79,12 +94,26 @@ export const Footer = styled.div`
   padding-top: 25px;
   padding-bottom: 25px;
   justify-content: space-between;
+  @media(max-width:1100px){
+    width: 970px;
+  }
+  @media(max-width:980px){
+    width: 750px;
+  }
+  @media(max-width:750px){
+    width: 500px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .footer-container2-section1 {
   margin-top: 10px;
   margin-bottom: 10px;
   padding-right: 15px;
   padding-left: 15px;
+  p{
+    font-size:14px;
+  }
 }
 .footer-container2-section2 {
   display: flex;

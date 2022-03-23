@@ -15,6 +15,15 @@ blockquote {
   padding-bottom: 100px;
   padding-top: 100px;
   position: relative;
+  @media(max-width:1100px){
+    width: 970px;
+  }
+  @media(max-width:980px){
+    width: 750px;
+  }
+  @media(max-width:750px){
+    width: 500px;
+  }
 }
 .section1 {
   padding-left: 15px;

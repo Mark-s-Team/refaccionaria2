@@ -13,6 +13,17 @@ export const Team = styled.div`
   padding-bottom: 75px;
   padding-top: 100px;
   flex-wrap:wrap;
+  @media(max-width:1100px){
+    width: 970px;
+  }
+  @media(max-width:980px){
+    width: 750px;
+    padding-bottom: 50px;
+    padding-top: 75px;
+  }
+  @media(max-width:750px){
+    width: 500px;
+  }
 }
 .section1{
     width:25%;
@@ -20,6 +31,9 @@ export const Team = styled.div`
     padding-right: 15px;
     margin-bottom: 30px;
     margin-top: 10px;
+    @media(max-width:750px){
+      width:100%;
+    }
 }
 .section2 {
     width: 75%;
@@ -27,6 +41,9 @@ export const Team = styled.div`
     padding-right: 25px;
     margin-bottom: 30px;
     margin-top: 10px;
+    @media(max-width:750px){
+      width:100%;
+    }
 }
 .slider-item-txt {
   width: 100%;
@@ -61,6 +78,9 @@ export const Team = styled.div`
 }
 .section3-1 {
   margin-top: -100px;
+  @media(max-width:750px){
+    margin-top: 0;
+  }
 }
 .read-more-btn {
   background-color: #fab915;

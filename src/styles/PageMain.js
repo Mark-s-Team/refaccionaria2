@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const PageMain = styled.div`
 .slider-container {
   position: relative;
+  background-color:#2f3233;
 }
 .slider-container img {
   width: 100%;
@@ -22,9 +23,27 @@ export const PageMain = styled.div`
   align-items: center;
   padding-right: 15px;
   padding-left: 15px;
+  @media(max-width:1300px){
+    padding-top: 110px;
+  }
+  @media(max-width:1100px){
+    width: 970px;
+  }
+  @media(max-width:980px){
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+  }
+  
 }
 .description {
   max-width: 500px;
+  @media(max-width:1100px){
+    max-width:100%;
+    width: 100%;
+    text-align: center;
+  }
 }
 .bold.text-uppercase.highlight {
   color: #fab915;
@@ -43,6 +62,12 @@ export const PageMain = styled.div`
   margin-bottom: 1em;
   margin-top: 0;
   color: #fff;
+  @media(max-width:1100px){
+    font-size: 48px;
+  }
+  @media(max-width:980px){
+    font-size: 36px;
+  }
 }
 .normal-p{
   margin: 0;
@@ -76,6 +101,9 @@ export const PageMain = styled.div`
   transition: all .4s linear 0s;
   margin: 0 10px 10px;
   margin-left: 0;
+  @media(max-width:380px){
+    margin-right: 0;
+  }
 }
 .btn2 {
   position: relative;
@@ -97,6 +125,9 @@ export const PageMain = styled.div`
   margin-right: 0;
   &:hover{
     color: #fab915;
+  }
+  @media(max-width:380px){
+    margin-left: 0;
   }
   
 }

@@ -29,6 +29,15 @@ background-size: cover;
   padding-top: 100px;
   position: relative;
   z-index: 3;
+  @media(max-width:1100px){
+    width: 970px;
+  }
+  @media(max-width:980px){
+    width: 750px;
+  }
+  @media(max-width:750px){
+    width: 500px;
+  }
 }
 .section1 {
   padding-left: 10px;
@@ -49,6 +58,18 @@ background-size: cover;
   padding-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  @media(max-width:980px){
+    &:nth-child(1), &:nth-child(4){
+      width:100%;
+    }
+    width:50%;
+  }
+  @media(max-width:750px){
+    &:nth-child(1), &:nth-child(4){
+      width:100%;
+    }
+    width:100%;
+  }
   input, select{
     height: 60px;
     background-color: transparent;
@@ -112,6 +133,9 @@ background-size: cover;
     min-width: 200px;
     margin-bottom: 20px;
     margin-right: 16px;
+    @media(max-width:980px){
+      min-width: 160px;
+    }
     }
 }
 .our-contacts {

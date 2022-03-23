@@ -32,10 +32,10 @@ export default function Home(){
             400: {
                 items: 1,
             },
-            600: {
-                items: 2,
+            750: {
+                items: 1,
             },
-            900: {
+            980: {
                 items: 2,
             },
             1000: {
@@ -58,8 +58,8 @@ export default function Home(){
             400: {
                 items: 1,
             },
-            600: {
-                items: 2,
+            750: {
+                items: 1,
             },
             900: {
                 items: 2,
@@ -84,13 +84,16 @@ export default function Home(){
                 items: 1,
             },
             400: {
-                items: 1,
+                items: 3,
             },
-            600: {
-                items: 2,
+            980: {
+                items: 5,
             },
-            1500: {
-                items: 6,
+            1024: {
+                items: 5,
+            },
+            1200: {
+                items: 7,
             },
             1600: {
                 items: 9,
@@ -132,6 +135,23 @@ export default function Home(){
         <>
             <Header ref={refA}>
                 <div className="header-top">
+                    
+                    <div className="header-data">
+                        <div className="data-items">
+                            <div className="data-item">
+                                <i className="fa-solid fa-location-dot"></i>
+                                58/3 Kass Drives, Miami 
+                            </div>
+                            <div className="data-item">
+                                <i className="fa-solid fa-pencil"></i>
+                                clearview@example.com
+                            </div>
+                            <div className="data-item">
+                                <i className="far fa-clock"></i>
+                                Working Hours: 24/7 
+                            </div>
+                        </div>
+                    </div>
                     <div className="header-social">
                         <div className="social-icons">
                             <div className="social-icon">
@@ -150,22 +170,6 @@ export default function Home(){
                                 <i className="fa-brands fa-youtube"></i>
                             </div>
                            
-                        </div>
-                    </div>
-                    <div className="header-data">
-                        <div className="data-items">
-                            <div className="data-item">
-                                <i className="fa-solid fa-location-dot"></i>
-                                58/3 Kass Drives, Miami 
-                            </div>
-                            <div className="data-item">
-                                <i className="fa-solid fa-pencil"></i>
-                                clearview@example.com
-                            </div>
-                            <div className="data-item">
-                                <i className="far fa-clock"></i>
-                                Working Hours: 24/7 
-                            </div>
                         </div>
                     </div>
                     <div className="header-search">
@@ -191,11 +195,23 @@ export default function Home(){
                                     <li><div onClick={()=> scrollTo(refB)}>About</div></li>
                                     <li><div onClick={()=> scrollTo(refC)}>Services</div></li>
                                     <li><div onClick={()=> scrollTo(refD)}>Team</div></li>
-                                    <li><div onClick={()=> scrollTo(refE)}>Get Quote</div></li>
-                                    <li><div onClick={()=> scrollTo(refF)}>Testimonals</div></li>
-                                    <li><div onClick={()=> scrollTo(refG)}>CallcBack</div></li>
+                                    <li><div className="hide-item" onClick={()=> scrollTo(refE)}>Get Quote</div></li>
+                                    <li><div className="hide-item" onClick={()=> scrollTo(refF)}>Testimonals</div></li>
+                                    <li><div className="hide-item" onClick={()=> scrollTo(refG)}>CallcBack</div></li>
                                     <li><div onClick={()=> setIsVisible(true)} >Contact</div></li>
+                                    <li className="more-li"><div className="hide-item-group">...</div>
+                                        <ul className="item-group">
+                                            <li><div onClick={()=> scrollTo(refE)}>Get Quote</div></li>
+                                            <li><div onClick={()=> scrollTo(refF)}>Testimonals</div></li>
+                                            <li><div onClick={()=> scrollTo(refG)}>CallcBack</div></li>
+                                        </ul>
+                                    </li>
                                 </ul>
+                            </div>
+                            <div className="menu-ul-mobile">
+                                <div className="toggle-btn">
+                                    <span></span>
+                                </div>
                             </div>
                         </div>
                         <div className="header-txt">

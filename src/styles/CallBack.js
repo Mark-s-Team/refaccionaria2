@@ -29,13 +29,26 @@ background-size: cover;
   z-index: 3;
   padding-left: 15px;
   padding-right: 15px;
+  @media(max-width:1100px){
+    width: 970px;
+  }
+  @media(max-width:980px){
+    width: 750px;
+  }
+  @media(max-width:750px){
+    width: 500px;
+  }
 }
 .section1 {
   display: flex;
+  flex-wrap:wrap;
 }
 .section1-1 {
   display: flex;
   width:25%;
+  @media(max-width:980px){
+    width:100%;
+  }
 }
 .section1-1-txt {
   display: flex;
@@ -44,12 +57,16 @@ background-size: cover;
   margin-bottom: 10px;
     h2 {
     color: #fff;
-    font-size: 40px;
+    font-size: 32px;
     }
 }
 .section1-2 {
   width: 75%;
   display: flex;
+  flex-wrap:wrap ;
+  @media(max-width:980px){
+    width:100%;
+  }
 }
 .section1-2-input {
   padding-left: 10px;
@@ -74,6 +91,11 @@ background-size: cover;
         width: 100%;
         font-style: italic;
     }
+  @media(max-width:750px){
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 .section1-2-button {
   padding-left: 10px;
@@ -97,5 +119,10 @@ background-size: cover;
         padding-left: 45px;
         width: 100%;
     }
+  @media(max-width:750px){
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 `;

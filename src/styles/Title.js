@@ -17,5 +17,8 @@ h2{
     font-size: 40px;
     color: ${props => props.color};
     margin-top: 0;
+    @media(max-width:1100px){
+        font-size: 30px;
+    }
 }
 `;
