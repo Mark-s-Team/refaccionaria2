@@ -21,7 +21,7 @@ export const Contact = styled.div`
     }
 }
 .contact-top {
-  padding-top: 180px;
+  padding-top: 50px;
   padding-bottom: 50px;
   max-width: 100%;
   padding-right: 15px;
@@ -33,9 +33,6 @@ export const Contact = styled.div`
   z-index: 2;
   color: #fff;
   flex-wrap:wrap;
-  @media(max-width:750px){
-    padding-top: 100px;
-  }
   @media(max-width:630px){
     padding-top: 50px;
   }
