@@ -23,10 +23,10 @@ export default function Contact(props){
             <div className="contact-container">
                 <div className="contact-top">
                     <div className="contact-top-title">
-                        <h2>Contacts</h2>
+                        <h2>Contact</h2>
                         <ul>
                             <li onClick={closePage}>Home</li>
-                            <li>Contacts</li>
+                            <li>Contact</li>
                         </ul>
                     </div>
                 </div>   
