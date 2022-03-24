@@ -219,6 +219,9 @@ z-index: 10;
       font-weight: 700;
       transition: all .2s ease-in-out 0s;
       cursor: pointer;
+      &:hover{
+        color: #fab915;
+      }
       @media(max-width:1600px){
         font-size: 12px;
         padding-top: 37px;
@@ -313,6 +316,10 @@ z-index: 10;
     width:100%;
     text-align:center;
     padding: 10px 0 !important;
+    transition: all .2s linear 0s;
+    &:hover{
+      color: #fab915;
+    }
   }
 }
 .more-li{
