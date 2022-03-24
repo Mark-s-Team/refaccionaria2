@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Contact = styled.div`
-
 .contact-container{
     background-image: url(assets/images/contact-top.jpg);
     background-attachment: fixed;
@@ -33,6 +32,14 @@ export const Contact = styled.div`
   position: relative;
   z-index: 2;
   color: #fff;
+  flex-wrap:wrap;
+  @media(max-width:750px){
+    padding-top: 100px;
+  }
+  @media(max-width:630px){
+    padding-top: 50px;
+  }
+  
 }
 .contact-top-title {
   text-align: center;
@@ -40,6 +47,9 @@ export const Contact = styled.div`
         font-size: 40px;
         font-weight: 700;
         line-height: 1.2;
+        @media(max-width:750px){
+          font-size: 30px;
+        }
     }
     ul{
         margin: 0;
@@ -77,6 +87,11 @@ export const Contact = styled.div`
   margin-right: auto;
   margin-left: auto;
   width: 1170px;
+  @media(max-width:750px){
+    width:500px;
+    padding-bottom: 75px;
+  }
+  flex-wrap:wrap;
   h3 {
     font-size: 32px;
     font-weight: 700;
@@ -87,9 +102,17 @@ export const Contact = styled.div`
   width: 66.66666667%;
   padding-left: 25px;
   padding-right: 25px;
+  @media(max-width:750px){
+    width:100%;
+  }
 }
 .contact-info {
   width: 33.33333333%;
+  @media(max-width:750px){
+    width:100%;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }
 .contact-title {
   padding-left: 10px;
@@ -107,6 +130,9 @@ export const Contact = styled.div`
   padding-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  @media(max-width:750px){
+    width:100%;
+  }
   input {
         width: 100%;
         height: 60px;
@@ -166,12 +192,20 @@ export const Contact = styled.div`
         background-color: #fab915;
         min-width: 200px;
         cursor: pointer;
+        @media(max-width:750px){
+          min-width: 160px;
+        }
     }
 }
 .contact-info-item {
   display: flex;
   margin-top: 15px;
   align-items: center;
+  @media(max-width:750px){
+    width:100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 .contact-info-item-ico {
   padding-right: 7px;
