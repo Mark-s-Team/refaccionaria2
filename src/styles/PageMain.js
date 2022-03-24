@@ -39,7 +39,7 @@ export const PageMain = styled.div`
 }
 .description {
   max-width: 500px;
-  @media(max-width:1100px){
+  @media(max-width:980px){
     max-width:100%;
     width: 100%;
     text-align: center;
@@ -101,6 +101,9 @@ export const PageMain = styled.div`
   transition: all .4s linear 0s;
   margin: 0 10px 10px;
   margin-left: 0;
+  &:hover{
+    color: #2f3233;
+  }
   @media(max-width:380px){
     margin-right: 0;
   }
