@@ -118,6 +118,9 @@ background-size: cover;
         padding-right: 45px;
         padding-left: 45px;
         width: 100%;
+        &:hover{
+          color: #2f3233;
+        }
     }
   @media(max-width:750px){
     width: 100%;
