@@ -98,6 +98,36 @@ export const Team = styled.div`
   border: none;
   transition: all .4s linear 0s;
   display: inline-block;
+  &:hover{
+    color: #2f3233;
+  }
+}
+.disabled{
+    opacity:0.5 !important;
+}
+.owl-carousel{
+  position: relative;
+   &:hover{
+        .owl-nav{
+            button{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                opacity:1 !important;
+                
+            }
+        }
+        .owl-prev.disabled{
+            opacity:0.5 !important;
+        }
+    } 
+}
+.owl-nav{
+    button{
+        position: absolute;
+        top: 0%;
+        opacity:0 !important;
+    }
 }
 
 `;
