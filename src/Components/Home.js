@@ -16,7 +16,10 @@ import { Slider } from '../styles/Slider';
 import { Footer } from '../styles/Footer';
 import { PageMain } from '../styles/PageMain';
 import Contact from './Contact';
-
+import VisibilitySensor from "react-visibility-sensor";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import "react-circular-progressbar/dist/styles.css";
+import { Menu } from '../styles/Menu';
 export default function Home(){
     const options = {
         margin: 30,
@@ -123,14 +126,23 @@ export default function Home(){
     const refF = useRef(null);
     const refG = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
-    
+    const [open, setOpen] = useState(false);
+    const toggleMenu = () =>{
+        setOpen(!open);
+    }
+    const showContact = () =>{
+        setIsVisible(true);
+        setOpen(false);
+    }
     const scrollTo = (el)=>{
         if (isVisible) {
             setIsVisible(false);
+            
         }
+        setOpen(false);
         el.current.scrollIntoView({behavior: 'smooth'});
     }
-    
+   
     return(
         <>
             <Header ref={refA}>
@@ -198,7 +210,7 @@ export default function Home(){
                                     <li><div className="hide-item" onClick={()=> scrollTo(refE)}>Get Quote</div></li>
                                     <li><div className="hide-item" onClick={()=> scrollTo(refF)}>Testimonals</div></li>
                                     <li><div className="hide-item" onClick={()=> scrollTo(refG)}>CallcBack</div></li>
-                                    <li><div onClick={()=> setIsVisible(true)} >Contact</div></li>
+                                    <li><div onClick={showContact} >Contact</div></li>
                                     <li className="more-li"><div className="hide-item-group">...</div>
                                         <ul className="item-group">
                                             <li><div onClick={()=> scrollTo(refE)}>Get Quote</div></li>
@@ -209,7 +221,7 @@ export default function Home(){
                                 </ul>
                             </div>
                             <div className="menu-ul-mobile">
-                                <div className="toggle-btn">
+                                <div className="toggle-btn" onClick={toggleMenu}>
                                     <span></span>
                                 </div>
                             </div>
@@ -220,6 +232,24 @@ export default function Home(){
                         </div>
                     </div>
                 </div>
+                
+                <Menu open={open}>
+                    <div className={`${open ? "menu-open":"menu-openc"}`}>
+                        <div className="toggle-btn" onClick={toggleMenu}>
+                            <span></span>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><div onClick={()=> scrollTo(refA)}>Home</div></li>
+                        <li><div onClick={()=> scrollTo(refB)}>About</div></li>
+                        <li><div onClick={()=> scrollTo(refC)}>Services</div></li>
+                        <li><div onClick={()=> scrollTo(refD)}>Team</div></li>
+                        <li><div onClick={()=> scrollTo(refE)}>Get Quote</div></li>
+                        <li><div onClick={()=> scrollTo(refF)}>Testimonals</div></li>
+                        <li><div onClick={()=> scrollTo(refG)}>CallcBack</div></li>
+                        <li><div onClick={showContact} >Contact</div></li>
+                    </ul>   
+                </Menu>
             </Header>
             <div className="body-container">
                 {isVisible ? 
@@ -619,6 +649,62 @@ export default function Home(){
                                         <Divider />
                                 </Title>
                                 <p>We provide the most proficient auto glass installation and replacement services in the greater San Diego area. ClearView can help you with your car needs, whether it means replacing a windshield or repairing a chip.</p>
+                            </div>
+                            <div className="section1-2">
+                            <VisibilitySensor partialVisibility={true} offset={{top:-600}}>
+                                {({ isVisible }) => {
+                                        const percentage = isVisible ? 75 : 0;
+                                        const percentage2 = isVisible ? 66 : 0;
+                                        const percentage3 = isVisible ? 43 : 0;
+                                        return (
+                                        <>
+                                            <div className="section1-1-1">
+                                                    <CircularProgressbar
+                                                        value={percentage}
+                                                        text={`${percentage}%`}
+                                                        styles={buildStyles({
+                                                            textColor: "#fab915",
+                                                            pathColor: "#fab915",
+                                                          })}
+                                                        strokeWidth={5}
+                                                    />
+                                                    <div className="section1-1-1-txt">
+                                                        <h5>Replacement</h5>
+                                                    </div>
+                                            </div>
+                                            <div className="section1-1-1">
+                                                    <CircularProgressbar
+                                                        value={percentage2}
+                                                        text={`${percentage2}%`}
+                                                        styles={buildStyles({
+                                                            textColor: "#fab915",
+                                                            pathColor: "#fab915",
+                                                          })}
+                                                        strokeWidth={5}
+                                                    />
+                                                    <div className="section1-1-1-txt">
+                                                        <h5>Glass Tinting</h5>
+                                                    </div>
+                                            </div>
+                                            <div className="section1-1-1">
+                                                    <CircularProgressbar
+                                                        value={percentage3}
+                                                        text={`${percentage3}%`}
+                                                        styles={buildStyles({
+                                                            textColor: "#fab915",
+                                                            pathColor: "#fab915",
+                                                          })}
+                                                        strokeWidth={5}
+                                                    />
+                                                    <div className="section1-1-1-txt">
+                                                        <h5>Chip Repair</h5>
+                                                    </div>
+                                            </div>
+                                        </>
+                                        
+                                    );
+                                }}
+                            </VisibilitySensor>
                             </div>
                         </div>
                     </div>
