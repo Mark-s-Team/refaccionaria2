@@ -24,7 +24,8 @@ export default function Home(){
     const options = {
         margin: 30,
         responsiveClass: true,
-        nav: false,
+        nav: true,
+        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
         dots: false,
         autoplay: false,
         smartSpeed: 1000,
@@ -50,7 +51,8 @@ export default function Home(){
     const options2 = {
         margin: 30,
         responsiveClass: true,
-        nav: false,
+        nav: true,
+        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
         dots: false,
         autoplay: false,
         smartSpeed: 1000,
@@ -135,10 +137,6 @@ export default function Home(){
         setOpen(false);
     }
     const scrollTo = (el)=>{
-        if (isVisible) {
-            setIsVisible(false);
-            
-        }
         setOpen(false);
         el.current.scrollIntoView({behavior: 'smooth'});
     }
@@ -146,7 +144,7 @@ export default function Home(){
     return(
         <>
             <Header ref={refA}>
-                <div className="header-top">
+                <div className="header-top" style={{display:isVisible ? "none":"flex"}}>
                     
                     <div className="header-data">
                         <div className="data-items">
@@ -193,7 +191,7 @@ export default function Home(){
                         </div>
                     </div>
                 </div>
-                <div className="header" id="headerS">
+                <div className="header" id="headerS" style={{display:isVisible ? "none":"block"}}>
                     <div className="header-container">
                         <div className="header-logo">
                             <div className="logo">
@@ -355,13 +353,13 @@ export default function Home(){
                                 <div className="section2-item">
                                     <div className="section2-item-icon">
                                         <div className="section2-item-ico">
-                                            <img src="assets/images/hood.png" alt="" />
+                                            <img src="assets/images/rear-window.png" alt="" />
                                         </div>
                                     </div>
                                     <div className="section2-item-txt">
                                         <h5>
                                             <a href="#">
-                                                <small>Windshield</small>
+                                                <small>Rear window</small>
                                                 remplacements
                                             </a>
                                         </h5>
@@ -370,13 +368,13 @@ export default function Home(){
                                 <div className="section2-item">
                                     <div className="section2-item-icon">
                                         <div className="section2-item-ico">
-                                            <img src="assets/images/hood.png" alt="" />
+                                            <img src="assets/images/door.png" alt="" />
                                         </div>
                                     </div>
                                     <div className="section2-item-txt">
                                         <h5>
                                             <a href="#">
-                                                <small>Windshield</small>
+                                                <small>Side window</small>
                                                 remplacements
                                             </a>
                                         </h5>
@@ -385,14 +383,14 @@ export default function Home(){
                                 <div className="section2-item">
                                     <div className="section2-item-icon">
                                         <div className="section2-item-ico">
-                                            <img src="assets/images/hood.png" alt="" />
+                                            <img src="assets/images/car.png" alt="" />
                                         </div>
                                     </div>
                                     <div className="section2-item-txt">
                                         <h5>
                                             <a href="#">
-                                                <small>Windshield</small>
-                                                remplacements
+                                                <small>Tinting all</small>
+                                                the windows
                                             </a>
                                         </h5>
                                     </div>
