@@ -100,4 +100,13 @@ blockquote {
 .section2 {
   margin-top: 60px;
 }
+.owl-nav {
+  position: absolute;
+  right: 0;
+  top: -130px;
+  @media(max-width:750px){
+    top: -70px;
+  }
+}
+
 `;
