@@ -133,6 +133,9 @@ background-size: cover;
     min-width: 200px;
     margin-bottom: 20px;
     margin-right: 16px;
+    &:hover{
+      color: #2f3233;
+    }
     @media(max-width:980px){
       min-width: 160px;
     }
@@ -153,5 +156,8 @@ background-size: cover;
   border: 2px solid #fab915;
   padding-right: 43px;
   padding-left: 43px;
+  &:hover{
+      color: #fab915;
+  }
 }
 `;
